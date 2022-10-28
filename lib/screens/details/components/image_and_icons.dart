@@ -4,16 +4,20 @@ import 'package:flutter_svg/svg.dart';
 import '../../../constants.dart';
 import 'icon_card.dart';
 
-class ImageAndIcons extends StatelessWidget {
+class ImageAndIcons extends StatefulWidget {
   const ImageAndIcons({
     Key? key,
     required this.size,
   }) : super(key: key);
-
   final Size size;
+  @override
+  State<ImageAndIcons> createState() => _ImageAndIconsState();
+}
 
+class _ImageAndIconsState extends State<ImageAndIcons> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: kDefaultPadding * 3),
       child: SizedBox(
@@ -22,15 +26,14 @@ class ImageAndIcons extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: kDefaultPadding * 3),
+                padding:
+                    const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
                 child: Column(
                   children: <Widget>[
                     Align(
                       alignment: Alignment.topLeft,
                       child: IconButton(
-                        icon: SvgPicture.asset(
-                            "assets/icons/back_arrow.svg"),
+                        icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
                         padding: const EdgeInsets.symmetric(
                             horizontal: kDefaultPadding),
                         onPressed: () {

@@ -4,9 +4,13 @@ import 'package:plant_app/screens/details/components/title_and_price.dart';
 
 import 'image_and_icons.dart';
 
-class Body1 extends StatelessWidget {
+class Body1 extends StatefulWidget {
   const Body1({super.key});
+  @override
+  State<Body1> createState() => _MyBody1State();
+}
 
+class _MyBody1State extends State<Body1> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
