@@ -42,10 +42,10 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
                       ),
                     ),
                     const Spacer(),
-                    const IconCard(icon: "assets/icons/sun.svg"),
-                    const IconCard(icon: "assets/icons/icon_2.svg"),
-                    const IconCard(icon: "assets/icons/icon_3.svg"),
-                    const IconCard(icon: "assets/icons/icon_4.svg"),
+                    const IconCard(icon: "assets/icons/list-check.svg"),
+                    const IconCard(icon: "assets/icons/hand-holding-heart.svg"),
+                    const IconCard(icon: "assets/icons/globe (1).svg"),
+                    const IconCard(icon: "assets/icons/power.svg"),
                   ],
                 ),
               ),
@@ -56,8 +56,8 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
               // ignore: prefer_const_constructors
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(63),
-                  bottomLeft: Radius.circular(63),
+                  topLeft: Radius.circular(50),
+                  bottomLeft: Radius.circular(50),
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -69,7 +69,8 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
                 image: const DecorationImage(
                   alignment: Alignment.centerLeft,
                   fit: BoxFit.cover,
-                  image: AssetImage("assets/images/img.png"),
+                  image: AssetImage(
+                      "assets/images/Nocturnal 420 - NocturnalAbstract_com.jpg"),
                 ),
               ),
             ),

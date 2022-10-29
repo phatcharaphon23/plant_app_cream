@@ -38,7 +38,7 @@ class _MyBody1State extends State<Body1> {
                       backgroundColor: kPrimaryColor),
                   onPressed: () {},
                   child: const Text(
-                    "ยืนยัน",
+                    "Camera",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -51,7 +51,7 @@ class _MyBody1State extends State<Body1> {
                 child: TextButton(
                   // ignore: prefer_const_constructors
                   child: Text(
-                    "Description",
+                    "Gallery",
                     style: const TextStyle(color: Colors.black, fontSize: 18),
                   ),
                   onPressed: () {},
