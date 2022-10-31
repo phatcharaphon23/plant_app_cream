@@ -26,7 +26,7 @@ class _ImgeSliderState extends State<ImgeSlider> {
               // ignore: prefer_const_constructors
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(50),
+                  //topLeft: Radius.circular(50),
                   bottomLeft: Radius.circular(50),
                 ),
                 boxShadow: [
