@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
-import 'icon_card.dart';
+import 'image_slider.dart';
 
 class ImageAndIcons extends StatefulWidget {
   const ImageAndIcons({
@@ -29,51 +29,147 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
                 padding:
                     const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: IconButton(
-                        icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: kDefaultPadding),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
+                    // Align(
+                    //   alignment: Alignment.topLeft,
+                    //   child: IconButton(
+                    //     icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
+                    //     padding: const EdgeInsets.symmetric(
+                    //         horizontal: kDefaultPadding),
+                    //     onPressed: () {},
+                    //   ),
+                    // ),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: size.height * 0.03),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 15),
+                            blurRadius: 22,
+                            color: kPrimaryColor.withOpacity(0.22),
+                          ),
+                          // ignore: prefer_const_constructors
+                          BoxShadow(
+                            offset: const Offset(-15, -15),
+                            blurRadius: 20,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      child: Align(
+                        // alignment: Alignment.topLeft,
+                        child: IconButton(
+                          icon: SvgPicture.asset("assets/icons/list-check.svg"),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
                       ),
                     ),
-                    const Spacer(),
-                    const IconCard(icon: "assets/icons/list-check.svg"),
-                    const IconCard(icon: "assets/icons/hand-holding-heart.svg"),
-                    const IconCard(icon: "assets/icons/globe (1).svg"),
-                    const IconCard(icon: "assets/icons/power.svg"),
+                    // const Spacer(),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: size.height * 0.03),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 15),
+                            blurRadius: 22,
+                            color: kPrimaryColor.withOpacity(0.22),
+                          ),
+                          // ignore: prefer_const_constructors
+                          BoxShadow(
+                            offset: const Offset(-15, -15),
+                            blurRadius: 20,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      child: Align(
+                        // alignment: Alignment.topLeft,
+                        child: IconButton(
+                          icon: SvgPicture.asset(
+                              "assets/icons/hand-holding-heart.svg"),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: size.height * 0.03),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 15),
+                            blurRadius: 22,
+                            color: kPrimaryColor.withOpacity(0.22),
+                          ),
+                          // ignore: prefer_const_constructors
+                          BoxShadow(
+                            offset: const Offset(-15, -15),
+                            blurRadius: 20,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      child: Align(
+                        // alignment: Alignment.topLeft,
+                        child: IconButton(
+                          icon: SvgPicture.asset("assets/icons/globe (1).svg"),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: size.height * 0.03),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: const Offset(0, 15),
+                            blurRadius: 22,
+                            color: kPrimaryColor.withOpacity(0.22),
+                          ),
+                          // ignore: prefer_const_constructors
+                          BoxShadow(
+                            offset: const Offset(-15, -15),
+                            blurRadius: 20,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      child: Align(
+                        // alignment: Alignment.topLeft,
+                        child: IconButton(
+                          icon: SvgPicture.asset("assets/icons/power.svg",
+                              height: 80, width: 80, fit: BoxFit.scaleDown),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: kDefaultPadding),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
-            Container(
-              height: size.height * 0.8,
-              width: size.width * 0.75,
-              // ignore: prefer_const_constructors
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(50),
-                  bottomLeft: Radius.circular(50),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(0, 10),
-                    blurRadius: 60,
-                    color: kPrimaryColor.withOpacity(0.29),
-                  )
-                ],
-                image: const DecorationImage(
-                  alignment: Alignment.centerLeft,
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                      "assets/images/Nocturnal 420 - NocturnalAbstract_com.jpg"),
-                ),
-              ),
-            ),
+            const ImgeSlider(),
           ],
         ),
       ),

@@ -1,39 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer_animation/shimmer_animation.dart';
 
 import '../../../constants.dart';
 
-class imge_slider extends StatelessWidget {
-  const imge_slider({
+class ImgeSlider extends StatefulWidget {
+  const ImgeSlider({
     Key? key,
-    required this.size,
   }) : super(key: key);
 
-  final Size size;
+  @override
+  State<ImgeSlider> createState() => _ImgeSliderState();
+}
 
+class _ImgeSliderState extends State<ImgeSlider> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: size.height * 0.8,
-      width: size.width * 0.75,
-      // ignore: prefer_const_constructors
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(63),
-          bottomLeft: Radius.circular(63),
+    Size size = MediaQuery.of(context).size;
+    return Row(
+      children: [
+        SizedBox(
+          child: Shimmer(
+            child: Container(
+              height: size.height * 0.8,
+              width: size.width * 0.75,
+              // ignore: prefer_const_constructors
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(50),
+                  bottomLeft: Radius.circular(50),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 10),
+                    blurRadius: 60,
+                    color: kPrimaryColor.withOpacity(0.29),
+                  )
+                ],
+                image: const DecorationImage(
+                  alignment: Alignment.centerLeft,
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      "assets/images/Nocturnal 420 - NocturnalAbstract_com.jpg"),
+                ),
+              ),
+            ),
+          ),
         ),
-        boxShadow: [
-          BoxShadow(
-            offset: const Offset(0, 10),
-            blurRadius: 60,
-            color: kPrimaryColor.withOpacity(0.29),
-          )
-        ],
-        image: const DecorationImage(
-          alignment: Alignment.centerLeft,
-          fit: BoxFit.cover,
-          image: AssetImage("assets/images/img.png"),
-        ),
-      ),
+      ],
     );
   }
 }
