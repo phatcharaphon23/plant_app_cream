@@ -39,13 +39,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   flutter_custom_cards: ^0.2.1
-  carousel_slider: ^4.1.1
+  carousel_pro: ^1.0.0
   shimmer_animation: ^2.1.0
+  easy_localization: ^3.0.1
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: "^0.10.0"
+  get: ^4.6.5 
+  
 
 flutter_icons:
   android: "launcher_icon"

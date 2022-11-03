@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+
 import 'package:plant_app/screens/details/components/title_and_price.dart';
 
 import 'image_and_icons.dart';
@@ -11,6 +13,11 @@ class Body1 extends StatefulWidget {
 }
 
 class _MyBody1State extends State<Body1> {
+  void main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await EasyLocalization.ensureInitialized();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
+import '../../../data/canabisdata.dart';
 import 'image_slider.dart';
 
 class ImageAndIcons extends StatefulWidget {
@@ -124,13 +126,26 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
                           ),
                         ],
                       ),
-                      child: Align(
-                        // alignment: Alignment.topLeft,
-                        child: IconButton(
-                          icon: SvgPicture.asset("assets/icons/globe (1).svg"),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: kDefaultPadding),
-                          onPressed: () {},
+                      child: Container(
+                        child: Align(
+                          // alignment: Alignment.topLeft,
+                          child: EasyLocalization(
+                            supportedLocales: [Locale('en'), Locale('th')],
+                            path: 'assets/lang',
+                            fallbackLocale: Locale('th'),
+                            child: IconButton(
+                                icon: SvgPicture.asset(
+                                    "assets/icons/globe (1).svg"),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: kDefaultPadding),
+                                onPressed: () => setState(() {
+                                      if (context.locale.languageCode == 'en') {
+                                        context.setLocale(Locale('th'));
+                                      } else {
+                                        context.setLocale(Locale('en'));
+                                      }
+                                    })),
+                          ),
                         ),
                       ),
                     ),
