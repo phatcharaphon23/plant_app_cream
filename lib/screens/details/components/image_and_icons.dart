@@ -129,22 +129,13 @@ class _ImageAndIconsState extends State<ImageAndIcons> {
                       child: Container(
                         child: Align(
                           // alignment: Alignment.topLeft,
-                          child: EasyLocalization(
-                            supportedLocales: [Locale('en'), Locale('th')],
-                            path: 'assets/lang',
-                            fallbackLocale: Locale('th'),
-                            child: IconButton(
-                                icon: SvgPicture.asset(
-                                    "assets/icons/globe (1).svg"),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: kDefaultPadding),
-                                onPressed: () => setState(() {
-                                      if (context.locale.languageCode == 'en') {
-                                        context.setLocale(Locale('th'));
-                                      } else {
-                                        context.setLocale(Locale('en'));
-                                      }
-                                    })),
+
+                          child: IconButton(
+                            icon:
+                                SvgPicture.asset("assets/icons/globe (1).svg"),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: kDefaultPadding),
+                            onPressed: () {},
                           ),
                         ),
                       ),
